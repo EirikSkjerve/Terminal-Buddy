@@ -7,7 +7,7 @@ use std::time::Duration;
 use crate::buddy::Buddy;
 
 /// file that handles displaying of buddy, messages
- 
+
 fn clear_terminal() {
     if cfg!(target_os = "windows") {
         // For Windows
@@ -46,14 +46,11 @@ pub fn display_message_with_buddy(message: &str, buddy: &Buddy, mood: Option<&st
 }
 
 /// displays a list of the stats. Unsure if needed
-pub fn display_stats(buddy: &Buddy){
+pub fn display_stats(buddy: &Buddy) {
     let message = "This is my current mood";
     let mood = "neutral";
     display_message_with_buddy(message, buddy, Some(mood));
-
 }
 
 /// displays a message conveying the mood of buddy. Should use a function from responses.rs
-pub fn display_mood(buddy: &Buddy){
-
-}
+pub fn display_mood(buddy: &Buddy) {}

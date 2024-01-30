@@ -81,7 +81,7 @@ impl Buddy {
     }
 
     /// returns an image of buddy that reflects buddys mood
-    pub fn get_mood_image(&self, mood:&str) -> &str{
+    pub fn get_mood_image(&self, mood: &str) -> &str {
         return "none";
     }
 

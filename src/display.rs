@@ -37,10 +37,20 @@ fn print_dialouge(input_str: &str, buddy_name: &String) {
 }
 
 /// prints the given message with a new random image of buddy
-pub fn display_message_with_buddy(message: &str, buddy: &Buddy) {
+pub fn display_message_with_buddy(message: &str, buddy: &Buddy, mood: &str) {
     clear_terminal();
 
     println!("{}", buddy.get_random_image());
 
     print_dialouge(message, &buddy.name);
+}
+
+/// displays a list of the stats. Unsure if needed
+pub fn display_stats_hard(buddy: &Buddy){
+
+}
+
+/// displays a message conveying the mood of buddy. Should use a function from responses.rs
+pub fn display_mood(buddy: &Buddy){
+
 }

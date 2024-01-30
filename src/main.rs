@@ -6,6 +6,7 @@ use std::time::Duration;
 
 mod buddy;
 mod display;
+mod responses;
 
 use display::display_message_with_buddy;
 use buddy::Buddy;

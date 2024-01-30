@@ -46,7 +46,10 @@ pub fn display_message_with_buddy(message: &str, buddy: &Buddy, mood: Option<&st
 }
 
 /// displays a list of the stats. Unsure if needed
-pub fn display_stats_hard(buddy: &Buddy){
+pub fn display_stats(buddy: &Buddy){
+    let message = "This is my current mood";
+    let mood = "neutral";
+    display_message_with_buddy(message, buddy, Some(mood));
 
 }
 

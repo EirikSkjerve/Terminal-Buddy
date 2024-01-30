@@ -13,7 +13,6 @@ use buddy::Buddy;
 
 /// main file
 
-
 /// Initialize a buddy with name, and some random values
 pub fn startup() -> Buddy {
     return Buddy::new(String::from("Buddy"));

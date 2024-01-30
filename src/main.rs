@@ -5,27 +5,7 @@ use std::io::Write; // Import Write trait
 use std::io::stdout;
 
 mod buddy;
-use buddy::Buddy;
-
-const BUDDY: [&str; 4] = ["    
-    ()_ _()
-    | O O |
-    ( >T< )
-   .^`-^-'^.
-   `.  ;  .'
-   | | | | |
-  ((_((|))_))",
-    "
-    ()_ _()
-    | ^ ^ |
-    ( >T< )
-   .^`-^-'^.
-   `.  ;  .'
-   | | | | |
-  ((_((|))_))"
-,
-"", 
-""];
+use buddy::{Buddy, IMAGE};
 
 fn clear_terminal() {
     if cfg!(target_os = "windows") {
@@ -60,34 +40,12 @@ fn print_message_with_buddy(message:&str, buddy_number:usize, buddy:&Buddy) {
 
   clear_terminal(); 
 
-  //let message_length = message.len();
-  //let over_under_line = "-".to_string().repeat(message_length+4);
-  println!("{}", BUDDY[buddy_number]);
-
-  // println!("{}", over_under_line); 
+  println!("{}", IMAGE[buddy_number]);
 
   print_dialouge(message, &buddy.name);
 
-  // println!("{}", over_under_line); 
 }
 
-/*
-fn print_options(){
-    for n in 0..OPTIONS.len(){
-        thread::sleep(Duration::from_millis(200));
-        println!("{}) {}", n+1, OPTIONS[n]);
-        thread::sleep(Duration::from_millis(200));
-    }
-}
-
-fn promt_options() -> usize{
-
-    loop{
-
-    }
-    0
-}
-*/
 
 pub fn startup() -> Buddy{
     // Initialize a buddy with name, and some random values

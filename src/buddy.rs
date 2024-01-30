@@ -11,8 +11,29 @@ pub struct Buddy{
     pub name: String,
     hungry: u8,
     tired: u8,
-    bored: u8
+    bored: u8,
 }
+
+pub const IMAGE: [&str; 4] = ["    
+    ()_ _()
+    | O O |
+    ( >T< )
+   .^`-^-'^.
+   `.  ;  .'
+   | | | | |
+  ((_((|))_))",
+    "
+    ()_ _()
+    | ^ ^ |
+    ( >T< )
+   .^`-^-'^.
+   `.  ;  .'
+   | | | | |
+  ((_((|))_))"
+,
+"", 
+""];
+
 
 impl Buddy{
     pub fn new(name:String) -> Self{

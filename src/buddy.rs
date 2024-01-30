@@ -60,6 +60,7 @@ impl Buddy {
         let tired = rand::thread_rng().gen_range(0..6);
         let bored = rand::thread_rng().gen_range(0..6);
 
+
         Buddy {
             name,
             hungry,

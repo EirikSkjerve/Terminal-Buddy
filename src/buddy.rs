@@ -80,6 +80,11 @@ impl Buddy {
         IMAGE[rand::thread_rng().gen_range(0..4).clone()]
     }
 
+    /// returns an image of buddy that reflects buddys mood
+    pub fn get_mood_image(&self, mood:&str) -> &str{
+        return "none";
+    }
+
     /// update the 'hungry' field
     pub fn update_hungry(&mut self, new_value: u8) {
         self.hungry = new_value;

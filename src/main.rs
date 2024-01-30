@@ -22,14 +22,14 @@ pub fn startup() -> Buddy {
 fn main() {
     // Startup
     let buddy = startup();
-    display_message_with_buddy("Hello buddy!", &buddy);
+    display_message_with_buddy("Hello buddy!", &buddy, None);
     thread::sleep(Duration::from_secs(1));
 
-    display_message_with_buddy("What are we going to do today?", &buddy);
-    thread::sleep(Duration::from_secs(1));
+    display_message_with_buddy("What are we going to do today?", &buddy, None);
+    thread::sleep(Duration::from_secs(2));
 
-    display_message_with_buddy("Hmm, what to do...", &buddy);
-    thread::sleep(Duration::from_secs(1));
+    display_message_with_buddy("Could really go for some fishsticks right now, how about you?", &buddy, None);
+    thread::sleep(Duration::from_secs(3));
 
-    display_message_with_buddy("Hello? Are you there hooman?", &buddy);
+    display_message_with_buddy("You are a great developer, don't let anyone tell you differently!", &buddy, None);
 }
